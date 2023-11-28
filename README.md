@@ -1,8 +1,17 @@
 # React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 개발 순서및 기능
 
-Currently, two official plugins are available:
+- 이전 html css 프로젝트를 재활용
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+  > <a href="https://github.com/KaengEE/imageGallery">이전 프로젝트</a>
+
+- 리엑트로 개발
+
+- 밤과 낮 테마 모드
+
+- 검색 기능 추가
+
+- unsplash 이미지 API를 활용하여 구현
+
+- 컨텍스트로 전역데이터 공유(테마, 검색어)
