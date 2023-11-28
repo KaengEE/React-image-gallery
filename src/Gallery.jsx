@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useGlobalContext } from "./context";
 import { useFetch } from "./useFetch";
 
@@ -6,13 +6,12 @@ const url = `https://api.unsplash.com/search/photos?client_id=${
   import.meta.env.VITE_ACCESS_KEY
 }`;
 
-const Gallery = () => {
+const Gallery = ({ setItem }) => {
   const { searchTerm } = useGlobalContext();
   const { data, error, isPending } = useFetch(
     `${url}&query=${searchTerm}&per_page=30`
   );
-
-  console.log(data);
+  //console.log(data);
 
   if (isPending) {
     return (
@@ -38,7 +37,11 @@ const Gallery = () => {
             const url = item?.urls?.regular;
             return (
               <li className="img" key={item.id}>
-                <img src={url} alt="{item.alt_description}" />
+                <img
+                  src={url}
+                  alt="{item.alt_description}"
+                  onClick={() => setItem(item)}
+                />
               </li>
             );
           })}
