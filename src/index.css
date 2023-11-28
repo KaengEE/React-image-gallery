@@ -185,9 +185,13 @@ header {
   align-items: center;
   margin-bottom: 20px;
 }
+.details i {
+  font-size: 25px;
+}
 
 .details span {
-  font-size: 18px;
+  margin-left: 10px;
+  font-size: 25px;
   font-weight: bold;
 }
 
