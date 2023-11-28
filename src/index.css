@@ -1,68 +1,50 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+/* 구글폰트(폰트는 항상 제일 위에) - poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
-body {
+/* 초기화 (마진, 패딩 0, 박스사이징을 border-box) */
+* {
   margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
-
 h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+  text-align: center;
+  margin-top: 50px;
+}
+/* 이미지 갤러리 전체 스타일 */
+.gallery {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+/* 이미지 박스 컨테이너 */
+.gallery .images {
+  /* gap 이미지 사이 간격 */
+  gap: 15px;
+  max-width: 80%;
+  margin: 40px 0;
+  /* 5열 컬럼을 만든다.
+  화면사이즈가 5*310px 안되면 자동으로 줄어듬*/
+  columns: 5 310px;
+  list-style: none;
+}
+/* 이미지를 담는 박스 */
+.gallery .images .img {
+  display: flex;
+  cursor: pointer; /* 커서가 클릭할 수 있게 변경 */
+  overflow: hidden; /* 안에있는 아이템이 밖으로 나올때(hover할때) 안보이게함 */
+  position: relative;
+  margin-bottom: 14px;
+  border-radius: 4px;
+}
+/* 실제 이미지 태그 */
+.gallery .images img {
+  width: 100%;
+  transition: transform 0.2s ease;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+.gallery .images .img:hover img {
+  /* 이미지 사이즈 1.1배 */
+  transform: scale(1.1);
 }
