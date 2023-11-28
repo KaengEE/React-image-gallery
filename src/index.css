@@ -1,6 +1,29 @@
 /* 구글폰트(폰트는 항상 제일 위에) - poppins */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
 
+:root {
+  /* 다크 모드 변수 */
+  --dark-mode-bg-color: #333;
+  --dark-mode-text-color: #f0f0f0;
+  --backgroundColor: #f8fafc;
+  --textColor: #0f172a;
+  --darkModeTransition: color 0.3s ease-in-out,
+    background-color 0.3s ease-in-out;
+}
+
+/* 다크모드 */
+.dark-theme {
+  background: var(--dark-mode-bg-color);
+  color: var(--dark-mode-text-color);
+}
+
+/* 라이트모드 */
+body {
+  background: var(--backgroundColor);
+  color: var(--textColor);
+  transition: var(--darkModeTransition);
+}
+
 /* 초기화 (마진, 패딩 0, 박스사이징을 border-box) */
 * {
   margin: 0;
