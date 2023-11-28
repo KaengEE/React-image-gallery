@@ -7,7 +7,7 @@ const PopupBox = ({ item, setItem }) => {
 
   //닫기 버튼
   function close() {
-    alert("닫기!");
+    setItem(null);
   }
   return (
     <div className="lightbox show">
