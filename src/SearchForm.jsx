@@ -10,8 +10,9 @@ const SearchForm = () => {
     const searchValue = e.target.elements.search.value?.trim();
     if (searchValue !== null && searchValue.length > 1) {
       //console.log(searchValue);
-      setSearchTerm(searchValue);
+      setSearchTerm(searchValue); //검색어 저장
     }
+    e.target.elements.search.value = "";
   };
 
   return (
