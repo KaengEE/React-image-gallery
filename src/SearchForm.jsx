@@ -23,7 +23,7 @@ const SearchForm = () => {
           type="text"
           className="search-input"
           name="search"
-          placeholder="cat"
+          placeholder="이미지 검색..."
         />
         <button type="submit" className="btn">
           search
