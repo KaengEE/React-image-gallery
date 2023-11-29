@@ -5,7 +5,7 @@ import { GoHeartFill } from "react-icons/go";
 const PopupBox = ({ item, setItem }) => {
   const url = item?.urls?.regular;
   const user = item?.user?.username;
-  console.log(item);
+  //console.log(item);
 
   //닫기 버튼
   function close() {
