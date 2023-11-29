@@ -18,4 +18,4 @@
 
 ## 배포링크
 
-<a href="">Image Gallery</a>
+<a href="https://react-image-gallery-kaengee.netlify.app/">Image Gallery</a>
