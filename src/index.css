@@ -248,3 +248,40 @@ header .buttons:hover {
   height: 100%;
   object-fit: contain;
 }
+
+.details p {
+  margin-left: 10px;
+  font-style: italic;
+}
+
+.likes {
+  color: palevioletred;
+}
+
+.likes svg {
+  font-size: 15px;
+}
+
+.description {
+  margin-top: 10px;
+  font-size: small;
+}
+
+.description .head {
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.description .text {
+  margin-left: 10px;
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+}
+
+hr {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}

@@ -1,9 +1,11 @@
 import React from "react";
+import { GoHeartFill } from "react-icons/go";
 
 // rafce 단축키
 const PopupBox = ({ item, setItem }) => {
   const url = item?.urls?.regular;
-  //console.log(item);
+  const user = item?.user?.username;
+  console.log(item);
 
   //닫기 버튼
   function close() {
@@ -27,6 +29,25 @@ const PopupBox = ({ item, setItem }) => {
             <img src={url} alt="preview-img" />
           </div>
         </div>
+        <hr />
+        <div className="box">
+          {/* 사진작가 */}
+          <p>Photo by. {user}</p>
+          {/* 좋아요 */}
+          <div className="info">
+            <span className="likes">
+              <GoHeartFill />
+              {item.likes}
+            </span>
+          </div>
+        </div>
+        {/* 사진설명 */}
+        {item.description !== null && (
+          <div className="description">
+            <p className="head">설명.</p>
+            <p className="text">{item.description}</p>
+          </div>
+        )}
       </div>
     </div>
   );
